@@ -209,39 +209,53 @@ body {
     }
 }
 
-/* Partners Section */
-#partners {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #6ed7df;
-}
-
-.partners-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+/* Partner Gallery Styling */
+.partners-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* 4 columns by default */
     gap: 20px;
+    padding: 0 20px;
+    text-align: center;
 }
 
 .partner {
-    width: 250px;
-    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.partner a {
+    display: block;
 }
 
 .partner img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
-.partner img:hover {
-    transform: scale(1.1);
+.partner:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-.partner h3 {
-    margin-top: 10px;
-    font-size: 18px;
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .partners-gallery {
+        grid-template-columns: repeat(3, 1fr);  /* 3 columns for medium screens (like tablets) */
+    }
+}
+
+@media (max-width: 768px) {
+    .partners-gallery {
+        grid-template-columns: repeat(2, 1fr);  /* 2 columns for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .partners-gallery {
+        grid-template-columns: 1fr;  /* 1 column for very small screens (mobile) */
+    }
 }
 
 /* Services Section */
