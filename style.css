@@ -27,7 +27,7 @@ body {
     height: 30px;
     border-radius: 30%;
     object-fit: cover;
-    margin-left: 0px;
+    margin-right: 0px; /* Adjusted for RTL */
 }
 
 /* Navigation links */
@@ -35,8 +35,8 @@ body {
     list-style: none;
     display: flex;
     gap: 20px;
-    flex-direction: row-reverse;
-    margin-right: 30px;
+    flex-direction: row-reverse; /* Right-to-left for navigation */
+    margin-left: 30px; /* Adjusted for RTL */
 }
 
 /* Navigation links style */
@@ -66,7 +66,7 @@ body {
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
     top: 100%;
-    left: 0;
+    right: 0; /* Adjusted for RTL */
     border-radius: 5px;
 }
 
@@ -137,6 +137,7 @@ body {
         text-align: center;
     }
 }
+
 /* Partners Section */
 #partners {
     text-align: center;
@@ -171,6 +172,7 @@ body {
     margin-top: 10px;
     font-size: 18px;
 }
+
 /* Services Section */
 #services {
     text-align: center;
@@ -232,6 +234,7 @@ body {
     margin-top: 10px;
     color: #555;
 }
+
 /* Service Detail Sections */
 .service-detail {
     display: none; /* Hide content by default */
@@ -251,24 +254,28 @@ body {
     font-size: 18px;
     margin-top: 20px;
 }
+
 .partner img:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
 }
+
 @media (max-width: 768px) {
     body {
         font-size: 16px;
     }
+
     .partners-gallery {
         grid-template-columns: repeat(2, 1fr); /* Reduce grid columns */
     }
+
     .video-section {
         height: auto;
         text-align: center;
     }
+
     .background-video {
         width: 100%;
         height: auto;
     }
 }
-
