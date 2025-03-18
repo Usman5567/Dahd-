@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute("href").substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 70, // Adjust for navbar height
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+        <img src="C:\Users\usman sheikh\Desktop\dahd frontend\images\IMG_20250317_202722.jpg" alt="Company Logo" width="120">
+        </div>
+        <ul class="nav-links" style="display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; flex-wrap: nowrap; overflow-x: auto;">
+            <li><a href="#contact" style="white-space: nowrap;">اتصل بنا</a></li> 
+            <li class="dropdown">
+                <a href="#aboutus" class="dropbtn">من نحن</a>
+                <div class="dropdown-content">
+                    <a href="#vision">الرؤية</a>
+                    <a href="#mission">الرسالة</a> 
+                    <a href="#values">القيم</a>
+                </div>
+            </li>
+            <li><a href="#partners">الشركاء الناجحون</a></li> 
+            <li><a href="#whyus">لماذا نحن؟</a></li>
+            <li><a href="#services">الخدمات</a></li>  
+            <li><a href="#home">الرئيسية</a></li>     
+        </ul>
+    </nav>
+
+    <!-- Video Section -->
+    <section id="home" class="video-section">
+        <video autoplay muted loop class="background-video">
+            <source src="C:\Users\usman sheikh\Desktop\dahd frontend\video\Smart City Digital City Video(360P).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay">
+            <h1>مرحبًا بكم في شركتنا</h1>
+            <p>نحن ملتزمون بتقديم خدمة استثنائية وجودة عالية.</p>
+        </div>
+    </section>
+
+<section id="services">
+    <h2>الخدمات</h2>
+    <p>نحن نقدم حلولاً متكاملة تلبي احتياجات عملائنا في مختلف المجالات.</p>
+
+    <div class="services-container">
+
+        
+        <div class="service" onclick="toggleService('service1')">
+            <img src="C:\Users\usman sheikh\Desktop\dahd frontend\images\experts.png" alt="">
+            <h3>الخبراء المؤهلون</h3>
+            <p class="service-content" id="service1">
+                نحن نقدم خبراء مؤهلين في مختلف المجالات لضمان تقديم خدمات ذات جودة عالية.
+            </p>
+        </div>
+
+        
+        <div class="service" onclick="toggleService('service2')">
+            <img src="C:\Users\usman sheikh\Desktop\dahd frontend\images\digital system.png" alt="">
+            <h3>وفقًا لنظام رقمي متكامل</h3>
+            <p class="service-content" id="service2">
+                حلولنا مبنية على أنظمة رقمية متكاملة لتوفير خدمات متطورة وفعالة.
+            </p>
+        </div>
+
+       
+        <div class="service" onclick="toggleService('service3')">
+            <img src="C:\Users\usman sheikh\Desktop\dahd frontend\images\download.png" alt="">
+            <h3>التعليم، التدريب، الاستشارات</h3>
+            <p class="service-content" id="service3">
+                نقدم خدمات تعليمية وتدريبية واستشارية متكاملة لدعم الأفراد والشركات.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="education" class="service-detail">
+    <h3>تطوير مشروعات تعليمية وتدريبية وتقنية</h3>
+    <p>نحن نقدم مشاريع تعليمية وتقنية متميزة، بما في ذلك تحسين تجربة المستخدم في البرمجيات التعليمية وتحقيق الفاعلية في تقديم المحتوى التعليمي.</p>
+</section>
+
+<section id="ai" class="service-detail">
+    <h3>تحليل البيانات والذكاء الاصطناعي</h3>
+    <p>نحن نقوم بجمع وتحليل البيانات الكبيرة، ونطور حلول الذكاء الاصطناعي وتعلم الآلة، إضافة إلى إنشاء تقارير حية ومعلومات تفاعلية للمساعدة في اتخاذ القرارات.</p>
+</section>
+
+<section id="support" class="service-detail">
+    <h3>خدمات الدعم الفني والصيانة</h3>
+    <p>نقدم صيانة الأجهزة والبرمجيات، بالإضافة إلى الدعم الفني على مدار الساعة. كما نقوم بإدارة الأعطال والتحديثات لتوفير استمرارية العمل بسلاسة.</p>
+</section>
+<section id="consulting" class="service-detail">
+    <h3>الاستشارات التقنية</h3>
+    <p>نساعد المؤسسات في تحليل احتياجاتها التقنية، وتقديم حلول مبتكرة لتحسين الأداء وتنفيذ استراتيجيات التحول الرقمي.</p>
+</section>
+<section id="software" class="service-detail">
+    <h3>تطوير البرمجيات والتطبيقات</h3>
+    <p>نقوم بتصميم وتطوير مواقع الويب وتطبيقات الهواتف الذكية. كما نقدم برمجيات مخصصة لتلبية احتياجات الأعمال المختلفة.</p>
+</section>
+<!-- JavaScript to toggle sections -->
+<script>
+    function toggleSection(sectionId) {
+        var sections = document.querySelectorAll('.service-detail');
+        sections.forEach(function(section) {
+            section.style.display = 'none';
+        });
+        
+        var selectedSection = document.getElementById(sectionId);
+        selectedSection.style.display = 'block';
+    }
+</script>
+<!-- Why Us Section -->
+<section id="whyus" style="background-color: #6a4c9c; color: white; padding: 50px 0;">
+    <div class="container" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+        <div class="text-column" style="flex: 1; padding: 20px; font-size: 18px; display: flex; flex-direction: column; justify-content: center;">
+            <h2 style="text-align: center; font-size: 36px;">لماذا نحن؟</h2>
+            <p>نحن نتميز بتقديم حلول مبتكرة وفعالة في مجالات متعددة. سواء كنت تبحث عن حلول تعليمية أو تقنية، فإننا نقدم لك خبرات متقدمة وفريق عمل متخصص لضمان النجاح.</p>
+            <p>خدماتنا تتضمن تقديم أفضل التقنيات الحديثة، واتباع أحدث معايير الجودة. نحن هنا لضمان تقديم أفضل الحلول التي تساهم في تطوير أعمالك وتحقيق أهدافك بكفاءة عالية.</p>
+        </div>
+        <div class="image-column" style="flex: 1; padding: 20px; text-align: center;">
+            <img src="C:\Users\usman sheikh\Desktop\dahd frontend\images\whyus.jpg" alt="Why Us Image" style="width: 100%; height: auto; max-height: 600px; object-fit: cover; border-radius: 8px;">
+        </div>
+    </div>
+</section>
+<!-- Partners Section -->
+<section id="partners" style="background: linear-gradient(to bottom, #8958fd, #917bf1); color: rgb(255, 255, 255); padding: 50px 0;">
+    <div class="container" style="text-align: center; margin-bottom: 30px;">
+        <h2 style="font-size: 36px; font-weight: bold;"> الشركاء الناجحون  </h2>
+        <p style="font-size: 18px; margin-top: 10px;">نحن فخورون بشراكتنا مع هذه الشركات الرائدة التي تشاركنا في تقديم أفضل الحلول. كل شريك يمثل جزءًا أساسيًا من نجاحنا وتقدمنا.</p>
+    </div>
+    <div class="partners-gallery" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 0 20px;">
+        <div class="partner" style="text-align: center; transition: transform 0.3s, box-shadow 0.3s;">
+            <a href="https://www.partner1.com" target="_blank">
+                <img src="C:\Users\usman sheikh\Desktop\dahd frontend\images\partner7.png" alt="Partner 1" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); transition: all 0.3s ease;">
+            </a>
+            <p style="margin-top: 10px;"></p>
+        </div>
+        <div class="partner" style="text-align: center; transition: transform 0.3s, box-shadow 0.3s;">
+            <a href="https://www.partner2.com" target="_blank">
+                <img src="C:\Users\usman sheikh\Desktop\dahd frontend\images\partner6.jpg" alt="Partner 2" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); transition: all 0.3s ease;">
+            </a>
+            <p style="margin-top: 10px;"></p>
+        </div>
+        <div class="partner" style="text-align: center; transition: transform 0.3s, box-shadow 0.3s;">
+            <a href="https://www.partner3.com" target="_blank">
+                <img src="C:\Users\usman sheikh\Desktop\dahd frontend\images\partner3.png" alt="Partner 3" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); transition: all 0.3s ease;">
+            </a>
+            <p style="margin-top: 10px;"></p>
+        </div>
+        <div class="partner" style="text-align: center; transition: transform 0.3s, box-shadow 0.3s;">
+            <a href="https://www.partner4.com" target="_blank">
+                <img src="C:\Users\usman sheikh\Desktop\dahd frontend\images\partner4.png" alt="Partner 4" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); transition: all 0.3s ease;">
+            </a>
+            <p style="margin-top: 10px;"></p>
+        </div>
+        <div class="partner" style="text-align: center; transition: transform 0.3s, box-shadow 0.3s;">
+            <a href="https://www.partner5.com" target="_blank">
+                <img src="C:\Users\usman sheikh\Desktop\dahd frontend\images\partner5.png" alt="Partner 5" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); transition: all 0.3s ease;">
+            </a>
+            <p style="margin-top: 10px;"></p>
+        </div>
+        <div class="partner" style="text-align: center; transition: transform 0.3s, box-shadow 0.3s;">
+            <a href="https://www.partner6.com" target="_blank">
+                <img src="C:\Users\usman sheikh\Desktop\dahd frontend\images\partner2.png" alt="Partner 6" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); transition: all 0.3s ease;">
+            </a>
+            <p style="margin-top: 10px;"></p>
+        </div>
+        <div class="partner" style="text-align: center; transition: transform 0.3s, box-shadow 0.3s;">
+            <a href="https://www.partner7.com" target="_blank">
+                <img src="C:\Users\usman sheikh\Desktop\dahd frontend\images\partner1.png" alt="Partner 7" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); transition: all 0.3s ease;">
+            </a>
+            <p style="margin-top: 10px;"></p>
+        </div>
+        <div class="partner" style="text-align: center; transition: transform 0.3s, box-shadow 0.3s;">
+            <a href="https://www.partner8.com" target="_blank">
+                <img src="C:\Users\usman sheikh\Desktop\dahd frontend\images\partner8.jpg" alt="Partner 8" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); transition: all 0.3s ease;">
+            </a>
+            <p style="margin-top: 10px;"></p>
+        </div>
+    </div>
+</section>
+<!-- Our Vision Section -->   
+<section id="aboutus" style="text-align: center; background-color: #4b2c72; color: white; padding: 20px 0;">
+    <h2 style="font-size: 36px;">من نحن</h2>
+    <p style="font-size: 18px;">نحن نقدم خدمات عالية الجودة لعملائنا.</p>
+</section>
+<section id="vision" style="background-color: #6a4c9c; color: white; padding: 50px 0;">
+    <div class="container" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+        <div class="text-column" style="flex: 1; padding: 20px; font-size: 18px; display: flex; flex-direction: column; justify-content: center;">
+            <h2 style="text-align: center; font-size: 36px;">رؤيتنا</h2>
+            <p>نحن نسعى لأن نكون رواد في تقديم الحلول الابتكارية والفعالة التي تسهم في تحقيق تقدم مستدام في المجتمع. رؤيتنا تركز على تقديم حلول تعليمية وتقنية تسهم في تمكين الأفراد والمنظمات لتحقيق أهدافهم.</p>
+        </div>
+        <div class="image-column" style="flex: 1; padding: 20px; text-align: center;">
+            <img src="C:\Users\usman sheikh\Desktop\dahd frontend\images\vision.png" alt="Our Vision Image" style="width: 100%; height: auto; max-height: 600px; object-fit: cover; border-radius: 8px;">
+        </div>
+    </div>
+</section>
+<!-- Our Mission Section --> 
+<section id="mission" style="background-color: #6a4c9c; color: white; padding: 50px 0;">
+    <div class="container" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+        <div class="image-column" style="flex: 1; padding: 20px; text-align: center;">
+            <img src="C:\Users\usman sheikh\Desktop\dahd frontend\images\mission.png" alt="Our Mission Image" style="width: 100%; height: auto; max-height: 600px; object-fit: cover; border-radius: 8px;">
+        </div>
+ <div class="text-column" style="flex: 1; padding: 20px; font-size: 18px; display: flex; flex-direction: column; justify-content: center;">
+            <h2 style="text-align: center; font-size: 36px;">رسالتنا</h2>
+            <p>رسالتنا هي تمكين الأفراد والمجتمعات من خلال تزويدهم بأدوات التعلم والتكنولوجيا المبتكرة. نسعى إلى تقديم حلول تقنية وتعليمية تساعد في تحسين الأداء وضمان الاستدامة في الأعمال والمشاريع.</p>
+        </div>
+    </div>
+</section>
+<!-- Our Values Section -->
+<section id="values" style="background-color: #6a4c9c; color: white; padding: 50px 0;">
+    <div class="container" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+        <div class="text-column" style="flex: 1; padding: 20px; font-size: 18px; display: flex; flex-direction: column; justify-content: center;">
+            <h2 style="text-align: center; font-size: 36px;">قيمنا</h2>
+            <p>نحن نؤمن بالقيم الأساسية التي تقودنا في كل ما نقوم به. من الالتزام بالجودة والابتكار إلى الشفافية والمصداقية، نحن نسعى دائمًا لتحقيق أعلى المعايير في خدماتنا ومنتجاتنا.</p>
+        </div>
+        <div class="image-column" style="flex: 1; padding: 20px; text-align: center;">
+            <img src="C:\Users\usman sheikh\Desktop\dahd frontend\images\values.png" alt="" style="width: 100%; height: auto; max-height: 600px; object-fit: cover; border-radius: 8px;">
+        </div>
+    </div>
+</section>
+<!-- Contact Us Section -->
+<section id="contact" style="background-color: #6a4c9c; color: white; padding: 50px 0;">
+    <div class="container" style="display: flex; justify-content: center; align-items: center; flex-direction: column; background-color: rgba(0, 0, 0, 0.5); padding: 50px; border-radius: 8px;">
+        <h2 style="font-size: 36px; text-align: center;">اتصل بنا</h2>
+        <p style="font-size: 18px; text-align: center; max-width: 800px; margin-bottom: 40px;">
+            نحن هنا لمساعدتك! لا تتردد في التواصل معنا لأي استفسارات أو احتياجات. نريد أن نسمع منك.
+        </p>
+        <form style="width: 100%; max-width: 600px; display: flex; flex-direction: column; gap: 20px;">
+            <input type="text" name="name" placeholder="الاسم" required style="padding: 10px; border-radius: 5px; border: none; font-size: 16px; width: 100%;"> 
+            <input type="email" name="email" placeholder="البريد الإلكتروني" required style="padding: 10px; border-radius: 5px; border: none; font-size: 16px; width: 100%;"> 
+            <textarea name="message" placeholder="رسالتك" required style="padding: 10px; border-radius: 5px; border: none; font-size: 16px; width: 100%; height: 200px;"></textarea>
+            <button type="submit" style="background-color: #9b56b4; color: white; padding: 12px 20px; border: none; border-radius: 5px; font-size: 18px; cursor: pointer;">
+                إرسال
+            </button>
+        </form>
+    </div>
+</section>
+<!-- Footer Section -->
+<footer style="background-color: #6a4c9c; color: white; padding: 20px 0; text-align: center;">
+    <div class="container">
+        <p style="font-size: 16px; margin: 0;">© 2025 جميع الحقوق محفوظة. تم تصميم الموقع بواسطة <strong>اسمك أو شركتك</strong>.</p>
+        <p style="font-size: 16px;">تابعنا على:</p>
+        <div style="margin-top: 10px;">
+            <a href="#" style="color: white; text-decoration: none; margin: 0 10px; font-size: 24px;">Facebook</a>
+            <a href="#" style="color: white; text-decoration: none; margin: 0 10px; font-size: 24px;">Twitter</a>
+            <a href="#" style="color: white; text-decoration: none; margin: 0 10px; font-size: 24px;">Instagram</a>
+            <a href="#" style="color: white; text-decoration: none; margin: 0 10px; font-size: 24px;">LinkedIn</a>
+        </div>    <div style="font-size: 16px; margin-top: 10px;">
+            <p>📞 WhatsApp: 00966112072640</p>
+            <p>📧 Email: Dhad.experts.com</p>
+        </div>
+    </div>
+</footer>
+    <script>
+        function toggleService(serviceId) {
+            let content = document.getElementById(serviceId);
+            content.style.display = (content.style.display === "block") ? "none" : "block";
+        }
+        </script>
+        
+</body>
+</html>
