@@ -22,6 +22,41 @@ body {
     z-index: 100;
 }
 
+/* Ensure that the logo is positioned correctly */
+.navbar .logo img {
+    width: 30px;
+    height: 30px;
+    border-radius: 30%;
+    object-fit: cover;
+    margin-right: 0px; /* Adjusted for RTL */
+    margin-left: 20px; /* Optional: Add spacing between logo and navbar */
+}
+
+/* Navigation links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-direction: row-reverse; /* Ensure the links are in the correct order for RTL */
+    margin-left: auto; /* Push navbar links to the right side */
+    margin-right: 30px; /* Adjust spacing from the right edge */
+}
+
+/* Navigation links style */
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: #6a3e92;
+}
+
+
 /* Logo style */
 .navbar .logo img {
     width: 30px;
