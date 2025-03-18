@@ -255,4 +255,20 @@ body {
     transform: scale(1.05);
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
 }
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    .partners-gallery {
+        grid-template-columns: repeat(2, 1fr); /* Reduce grid columns */
+    }
+    .video-section {
+        height: auto;
+        text-align: center;
+    }
+    .background-video {
+        width: 100%;
+        height: auto;
+    }
+}
 
