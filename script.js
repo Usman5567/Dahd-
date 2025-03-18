@@ -8,11 +8,3 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
         });
     });
 });
-function toggleService(serviceId) {
-    var serviceContent = document.getElementById(serviceId);
-    if (serviceContent.style.display === 'block') {
-        serviceContent.style.display = 'none';
-    } else {
-        serviceContent.style.display = 'block';
-    }
-}
